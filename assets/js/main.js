@@ -3,22 +3,54 @@
  * Main JavaScript File
  */
 
-// Page Loader - Extended display time to show full animation
-window.addEventListener('load', function() {
+// Page Loader - Smart loading based on session state
+(function() {
     const loader = document.getElementById('page-loader');
-    if (loader) {
-        // Wait for the full animation to complete (3.5 seconds)
-        setTimeout(function() {
-            // Add hidden class for fade out
-            loader.classList.add('hidden');
-            
-            // Remove from DOM after fade animation
+    if (!loader) return;
+
+    // Check if this is the first visit in this session
+    const hasSeenFullLoader = sessionStorage.getItem('kea_loader_shown');
+    const isHomepage = window.location.pathname === '/' || 
+                       window.location.pathname.endsWith('index.html') ||
+                       window.location.pathname === '/index.html';
+    
+    if (!hasSeenFullLoader && isHomepage) {
+        // First visit to homepage - show full premium loader
+        sessionStorage.setItem('kea_loader_shown', 'true');
+        
+        window.addEventListener('load', function() {
+            // Wait for the full animation to complete (3.5 seconds)
             setTimeout(function() {
-                loader.remove();
-            }, 800);
-        }, 3500);
+                loader.classList.add('hidden');
+                setTimeout(function() {
+                    loader.remove();
+                }, 800);
+            }, 3500);
+        });
+    } else {
+        // Internal navigation - show light loader
+        loader.classList.add('light-loader');
+        
+        // Add light spinner dots
+        const loaderContent = loader.querySelector('.loader-content');
+        if (loaderContent) {
+            const lightSpinner = document.createElement('div');
+            lightSpinner.className = 'light-spinner';
+            lightSpinner.innerHTML = '<span></span><span></span><span></span>';
+            loaderContent.appendChild(lightSpinner);
+        }
+        
+        window.addEventListener('load', function() {
+            // Quick fade out (500ms display + 400ms fade)
+            setTimeout(function() {
+                loader.classList.add('hidden');
+                setTimeout(function() {
+                    loader.remove();
+                }, 400);
+            }, 500);
+        });
     }
-});
+})();
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {

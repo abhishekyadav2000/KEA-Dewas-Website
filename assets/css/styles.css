@@ -3,7 +3,7 @@
    ===================================================== */
 
 /* =====================================================
-   Page Loader - DPS Style Premium Loader
+   Page Loader - DPS Style Premium Loader (Homepage/First Visit)
    ===================================================== */
 .page-loader {
     position: fixed;
@@ -23,6 +23,90 @@
     pointer-events: none;
 }
 
+/* =====================================================
+   Light Page Transition (Internal Navigation)
+   ===================================================== */
+.page-loader.light-loader {
+    background: rgba(10, 31, 61, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.page-loader.light-loader .loader-content {
+    gap: 15px;
+}
+
+.page-loader.light-loader .loader-logo {
+    width: 60px;
+    height: 60px;
+    animation: light-logo-spin 0.8s ease-in-out infinite;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-loader.light-loader .loader-logo img {
+    filter: drop-shadow(0 0 15px rgba(212, 168, 75, 0.5));
+}
+
+.page-loader.light-loader .loader-text,
+.page-loader.light-loader .loader-subtext,
+.page-loader.light-loader .loader-progress,
+.page-loader.light-loader .loader-tagline,
+.page-loader.light-loader .loader-decoration {
+    display: none;
+}
+
+.page-loader.light-loader .light-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.page-loader.light-loader .light-spinner span {
+    width: 8px;
+    height: 8px;
+    background: #d4a84b;
+    border-radius: 50%;
+    animation: light-bounce 0.6s ease-in-out infinite;
+}
+
+.page-loader.light-loader .light-spinner span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.page-loader.light-loader .light-spinner span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.light-spinner {
+    display: none;
+}
+
+@keyframes light-logo-spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.05) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes light-bounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+/* Full Premium Loader Styles */
 .loader-content {
     display: flex;
     flex-direction: column;
