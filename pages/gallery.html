@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery of Kautilya Educational Academy, Dewas - events, celebrations, campus, and student activities.">
+    <meta name="keywords" content="school gallery, school photos, events photos, campus images, Dewas school gallery">
+    
+    <title>Gallery | Kautilya Educational Academy, Dewas</title>
+    
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">K</div>
+                <div class="logo-text">
+                    <span class="school-name">Kautilya Educational Academy</span>
+                    <span class="school-location">Dewas, Madhya Pradesh</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#vision">Vision & Mission</a></li>
+                            <li><a href="about.html#principal">Principal's Message</a></li>
+                            <li><a href="about.html#management">Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="academics.html" class="nav-link">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html#curriculum">Curriculum</a></li>
+                            <li><a href="academics.html#pre-primary">Pre-Primary</a></li>
+                            <li><a href="academics.html#primary">Primary School</a></li>
+                            <li><a href="academics.html#secondary">Secondary School</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+                    <li class="nav-item"><a href="student-life.html" class="nav-link">Student Life</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="campus">Campus</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="academics">Academics</button>
+                <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Campus Images -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="image-placeholder">🏫 School Building</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <div class="image-placeholder">📚 Library</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <div class="image-placeholder">🔬 Science Lab</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <div class="image-placeholder">💻 Computer Lab</div>
+                    <div class="overlay">🔍</div>
+                </div>
+
+                <!-- Events -->
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">🎭 Annual Day</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">🎪 Cultural Program</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">🎤 Speech Competition</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">🏆 Award Ceremony</div>
+                    <div class="overlay">🔍</div>
+                </div>
+
+                <!-- Sports -->
+                <div class="gallery-item" data-category="sports">
+                    <div class="image-placeholder">🏃 Sports Day</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="image-placeholder">⚽ Football Match</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="image-placeholder">🏀 Basketball</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="image-placeholder">🏏 Cricket Match</div>
+                    <div class="overlay">🔍</div>
+                </div>
+
+                <!-- Academics -->
+                <div class="gallery-item" data-category="academics">
+                    <div class="image-placeholder">📖 Classroom</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="academics">
+                    <div class="image-placeholder">🔬 Science Experiment</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="academics">
+                    <div class="image-placeholder">🧪 Lab Activity</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="academics">
+                    <div class="image-placeholder">📊 Project Work</div>
+                    <div class="overlay">🔍</div>
+                </div>
+
+                <!-- Celebrations -->
+                <div class="gallery-item" data-category="celebrations">
+                    <div class="image-placeholder">🇮🇳 Republic Day</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="celebrations">
+                    <div class="image-placeholder">🪔 Diwali</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="celebrations">
+                    <div class="image-placeholder">🎄 Christmas</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="celebrations">
+                    <div class="image-placeholder">👨‍🏫 Teachers Day</div>
+                    <div class="overlay">🔍</div>
+                </div>
+
+                <!-- More Images -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="image-placeholder">🏟️ Playground</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">🎨 Art Exhibition</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="image-placeholder">🏸 Badminton</div>
+                    <div class="overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-category="celebrations">
+                    <div class="image-placeholder">👶 Children's Day</div>
+                    <div class="overlay">🔍</div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center" style="margin-top: var(--spacing-2xl);">
+                <button class="btn btn-outline btn-lg">Load More Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Albums -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Albums</h2>
+                <p>Browse photos by event</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">🎉</div>
+                    <div class="content">
+                        <h4>Annual Day 2025</h4>
+                        <p>48 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">🏅</div>
+                    <div class="content">
+                        <h4>Sports Day 2025</h4>
+                        <p>62 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">🇮🇳</div>
+                    <div class="content">
+                        <h4>Independence Day 2025</h4>
+                        <p>35 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">🔬</div>
+                    <div class="content">
+                        <h4>Science Exhibition 2025</h4>
+                        <p>42 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">🪔</div>
+                    <div class="content">
+                        <h4>Diwali Celebration 2025</h4>
+                        <p>28 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">👨‍🎓</div>
+                    <div class="content">
+                        <h4>Farewell 2025</h4>
+                        <p>55 Photos</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: var(--spacing-sm);">View Album</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: var(--spacing-2xl);">
+                <a href="#" class="btn btn-primary">View All Albums</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Video Gallery</h2>
+                <p>Watch videos of our events and activities</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">▶️</div>
+                    <div class="content">
+                        <h4>Annual Day Highlights</h4>
+                        <p>5:32 mins</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">▶️</div>
+                    <div class="content">
+                        <h4>Campus Tour</h4>
+                        <p>3:45 mins</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="image-placeholder" style="font-size: 3rem;">▶️</div>
+                    <div class="content">
+                        <h4>Sports Day 2025</h4>
+                        <p>4:20 mins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <button class="lightbox-close">✕</button>
+        <div class="lightbox-content">
+            <div class="image-placeholder" style="width: 80vw; height: 60vh; max-width: 1000px;">
+                [Full Size Image]
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Visit Our Campus</h2>
+            <p>Experience the vibrant atmosphere of Kautilya Educational Academy firsthand.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-secondary btn-lg">Schedule a Visit</a>
+                <a href="admissions.html" class="btn btn-white btn-lg">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">K</div>
+                        <span class="logo-text">Kautilya Educational Academy</span>
+                    </div>
+                    <p>Empowering young minds with knowledge, values, and skills for a brighter tomorrow.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="campus.html">Campus & Facilities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="news.html">News & Circulars</a></li>
+                        <li><a href="student-life.html">Student Life</a></li>
+                        <li><a href="#">Online Fee Payment</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span>Main Road, Near City Center,<br>Dewas, Madhya Pradesh 455001</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>+91 7272 XXXXXX</span>
+                        </li>
+                        <li>
+                            <span class="icon">✉️</span>
+                            <span>info@kautilyaacademy.edu.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kautilya Educational Academy, Dewas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Gallery Filter
+        document.querySelectorAll('.gallery-filter .filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.gallery-filter .filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('.gallery-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

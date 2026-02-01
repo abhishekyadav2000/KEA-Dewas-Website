@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news, circulars, and announcements from Kautilya Educational Academy, Dewas - stay updated with school events and notices.">
+    <meta name="keywords" content="school news, circulars, announcements, notices, Kautilya Academy updates, Dewas school news">
+    
+    <title>News & Circulars | Kautilya Educational Academy, Dewas</title>
+    
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">K</div>
+                <div class="logo-text">
+                    <span class="school-name">Kautilya Educational Academy</span>
+                    <span class="school-location">Dewas, Madhya Pradesh</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#vision">Vision & Mission</a></li>
+                            <li><a href="about.html#principal">Principal's Message</a></li>
+                            <li><a href="about.html#management">Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="academics.html" class="nav-link">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html#curriculum">Curriculum</a></li>
+                            <li><a href="academics.html#pre-primary">Pre-Primary</a></li>
+                            <li><a href="academics.html#primary">Primary School</a></li>
+                            <li><a href="academics.html#secondary">Secondary School</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+                    <li class="nav-item"><a href="student-life.html" class="nav-link">Student Life</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link active">News</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>News & Circulars</h1>
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>News & Circulars</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section bg-white" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all" onclick="filterNews('all')">All</button>
+                <button class="filter-btn" data-filter="academics" onclick="filterNews('academics')">Academics</button>
+                <button class="filter-btn" data-filter="events" onclick="filterNews('events')">Events</button>
+                <button class="filter-btn" data-filter="admissions" onclick="filterNews('admissions')">Admissions</button>
+                <button class="filter-btn" data-filter="circulars" onclick="filterNews('circulars')">Circulars</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="news-grid">
+                <!-- News Item 1 -->
+                <div class="news-card" data-category="events">
+                    <div class="date">
+                        <span class="day">28</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge" style="background: #10b981;">New</span>
+                        <span class="badge">Event</span>
+                        <h4>Republic Day Celebration 2026</h4>
+                        <p>Students participated enthusiastically in the 77th Republic Day celebrations with cultural programs, patriotic songs, and a grand parade.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-card" data-category="academics">
+                    <div class="date">
+                        <span class="day">25</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge" style="background: #10b981;">New</span>
+                        <span class="badge">Academics</span>
+                        <h4>Board Exam Preparation Workshop</h4>
+                        <p>Special guidance sessions for Class X and XII students appearing for CBSE Board Examinations 2026.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-card" data-category="admissions">
+                    <div class="date">
+                        <span class="day">15</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Admissions</span>
+                        <h4>Admissions Open for 2026-27</h4>
+                        <p>Registration for new admissions for the academic year 2026-27 is now open. Limited seats available. Apply early!</p>
+                        <a href="admissions.html" class="read-more">Apply Now →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="news-card" data-category="circulars">
+                    <div class="date">
+                        <span class="day">10</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Circular</span>
+                        <h4>Winter Uniform Guidelines</h4>
+                        <p>Important circular regarding winter uniform dress code and timings for the remaining winter months.</p>
+                        <a href="#" class="read-more">Download PDF →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="news-card" data-category="events">
+                    <div class="date">
+                        <span class="day">05</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Event</span>
+                        <h4>Science Exhibition Winners</h4>
+                        <p>Congratulations to all winners of the Annual Science Exhibition. Outstanding projects displayed by students from all grades.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="news-card" data-category="academics">
+                    <div class="date">
+                        <span class="day">28</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Academics</span>
+                        <h4>Unit Test III Schedule</h4>
+                        <p>Schedule for Unit Test III for Classes I to IX has been announced. View the complete timetable and syllabus.</p>
+                        <a href="#" class="read-more">View Schedule →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 7 -->
+                <div class="news-card" data-category="events">
+                    <div class="date">
+                        <span class="day">25</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Event</span>
+                        <h4>Christmas Celebration</h4>
+                        <p>Joyful Christmas celebrations at school with carol singing, decoration, and special assembly program.</p>
+                        <a href="gallery.html" class="read-more">View Photos →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 8 -->
+                <div class="news-card" data-category="circulars">
+                    <div class="date">
+                        <span class="day">20</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Circular</span>
+                        <h4>Winter Vacation Notice</h4>
+                        <p>School will remain closed for winter vacation from December 25, 2025 to January 1, 2026.</p>
+                        <a href="#" class="read-more">Download PDF →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 9 -->
+                <div class="news-card" data-category="academics">
+                    <div class="date">
+                        <span class="day">14</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Academics</span>
+                        <h4>Children's Day Celebrations</h4>
+                        <p>Fun-filled Children's Day celebration with special activities, games, and performances by teachers for students.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 10 -->
+                <div class="news-card" data-category="events">
+                    <div class="date">
+                        <span class="day">10</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Event</span>
+                        <h4>Annual Sports Meet 2025</h4>
+                        <p>A grand display of sportsmanship at our Annual Sports Meet. Students competed in various athletic events.</p>
+                        <a href="gallery.html" class="read-more">View Gallery →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 11 -->
+                <div class="news-card" data-category="circulars">
+                    <div class="date">
+                        <span class="day">01</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Circular</span>
+                        <h4>PTM Schedule - November</h4>
+                        <p>Parent-Teacher Meeting scheduled for November 8, 2025. Parents are requested to attend to discuss student progress.</p>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- News Item 12 -->
+                <div class="news-card" data-category="events">
+                    <div class="date">
+                        <span class="day">23</span>
+                        <span class="month">Oct</span>
+                    </div>
+                    <div class="content">
+                        <span class="badge">Event</span>
+                        <h4>Diwali Celebrations</h4>
+                        <p>Festive celebrations with rangoli competition, lamp lighting ceremony, and cultural performances.</p>
+                        <a href="gallery.html" class="read-more">View Photos →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="text-center" style="margin-top: var(--spacing-2xl);">
+                <div style="display: inline-flex; gap: var(--spacing-sm);">
+                    <button class="btn btn-outline" disabled>← Previous</button>
+                    <button class="btn btn-primary">1</button>
+                    <button class="btn btn-outline">2</button>
+                    <button class="btn btn-outline">3</button>
+                    <button class="btn btn-outline">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Circulars Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Important Circulars</h2>
+                <p>Download important notices and circulars</p>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Category</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28 Jan 2026</td>
+                            <td>Republic Day Celebration Schedule</td>
+                            <td><span class="badge">Event</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>20 Jan 2026</td>
+                            <td>Board Exam Guidelines for Parents</td>
+                            <td><span class="badge">Academics</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>15 Jan 2026</td>
+                            <td>Admission Form 2026-27</td>
+                            <td><span class="badge">Admissions</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>10 Jan 2026</td>
+                            <td>Winter Uniform Guidelines</td>
+                            <td><span class="badge">Circular</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>28 Dec 2025</td>
+                            <td>Unit Test III Schedule</td>
+                            <td><span class="badge">Academics</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td>20 Dec 2025</td>
+                            <td>Winter Vacation Notice</td>
+                            <td><span class="badge">Circular</span></td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">📄 PDF</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <a href="#" class="btn btn-primary">View All Circulars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter to receive the latest news and circulars directly in your inbox.</p>
+            <form style="max-width: 500px; margin: var(--spacing-xl) auto 0; display: flex; gap: var(--spacing-md); flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 250px; padding: var(--spacing-md); border: none; border-radius: var(--radius-md); font-size: 1rem;">
+                <button type="submit" class="btn btn-secondary btn-lg">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">K</div>
+                        <span class="logo-text">Kautilya Educational Academy</span>
+                    </div>
+                    <p>Empowering young minds with knowledge, values, and skills for a brighter tomorrow.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="campus.html">Campus & Facilities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="news.html">News & Circulars</a></li>
+                        <li><a href="student-life.html">Student Life</a></li>
+                        <li><a href="#">Online Fee Payment</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="icon">📍</span>
+                            <span>Main Road, Near City Center,<br>Dewas, Madhya Pradesh 455001</span>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <span>+91 7272 XXXXXX</span>
+                        </li>
+                        <li>
+                            <span class="icon">✉️</span>
+                            <span>info@kautilyaacademy.edu.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kautilya Educational Academy, Dewas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
