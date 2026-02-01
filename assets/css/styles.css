@@ -1292,13 +1292,140 @@ ul, ol {
 
 .content-image .image-placeholder {
     aspect-ratio: 4/3;
-    background: linear-gradient(135deg, var(--light-gray), var(--medium-gray));
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 50%, #f0f4f8 100%);
+    background-size: 200% 200%;
+    animation: placeholder-shimmer 2s ease-in-out infinite;
     border-radius: var(--radius-lg);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--text-light);
+    color: var(--primary-color);
     font-size: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Coming Soon Placeholder Animation */
+.image-placeholder {
+    position: relative;
+}
+
+.image-placeholder::before {
+    content: '📸';
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    animation: placeholder-bounce 2s ease-in-out infinite;
+}
+
+.image-placeholder::after {
+    content: 'Coming Soon';
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+@keyframes placeholder-shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes placeholder-bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+/* Gallery Placeholder - Special Styling */
+.gallery-item .image-placeholder {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #0a1f3d 0%, #1a365d 100%);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item .image-placeholder::before {
+    content: none;
+}
+
+.gallery-item .image-placeholder::after {
+    content: 'View Photo';
+    position: absolute;
+    bottom: 12px;
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .image-placeholder::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item:hover .image-placeholder {
+    background: linear-gradient(135deg, #12305a 0%, #234578 100%);
+    transform: scale(1.02);
+}
+
+/* Principal/Staff Placeholder */
+.team-card .image-placeholder,
+.content-image .image-placeholder[style*="border-radius: 50%"] {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.team-card .image-placeholder::before,
+.content-image .image-placeholder[style*="border-radius: 50%"]::before {
+    content: '👤';
+    font-size: 3rem;
+    animation: none;
+}
+
+.team-card .image-placeholder::after,
+.content-image .image-placeholder[style*="border-radius: 50%"]::after {
+    content: 'Photo Coming';
+    font-size: 0.65rem;
+}
+
+/* Student Life Activity Placeholders */
+.activity-placeholder {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px dashed var(--secondary-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    animation: placeholder-pulse 2s ease-in-out infinite;
+}
+
+@keyframes placeholder-pulse {
+    0%, 100% {
+        border-color: var(--secondary-color);
+        opacity: 1;
+    }
+    50% {
+        border-color: var(--primary-color);
+        opacity: 0.7;
+    }
 }
 
 .content-image .content-img {
@@ -2493,5 +2620,102 @@ tr:hover {
         height: calc(100vh - 120px);
         bottom: 70px;
         right: -8px;
+    }
+}
+
+/* =====================================================
+   WhatsApp Floating Button
+   ===================================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 9998;
+}
+
+.whatsapp-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: #ffffff;
+}
+
+.whatsapp-btn:hover + .whatsapp-tooltip,
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes whatsapp-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+}
+
+/* Mobile Responsive - WhatsApp */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 16px;
+        left: 16px;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-tooltip {
+        display: none;
     }
 }

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Kautilya Educational Academy, Dewas</title>
+    <meta name="description" content="This resource is coming soon. Please check back later.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/school logo.png">
+    
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --primary-gold: #d4a84b;
+            --light-gray: #f7f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a7a 100%);
+            overflow: hidden;
+            position: relative;
+            padding: 2rem;
+        }
+
+        /* Animated Background */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 25% 25%, var(--primary-gold) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, var(--primary-gold) 2px, transparent 2px);
+            background-size: 60px 60px;
+            animation: pattern-move 20s linear infinite;
+        }
+
+        @keyframes pattern-move {
+            0% { background-position: 0 0, 30px 30px; }
+            100% { background-position: 60px 60px, 90px 90px; }
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            z-index: 10;
+            max-width: 500px;
+        }
+
+        /* Document Animation */
+        .document-icon {
+            position: relative;
+            width: 120px;
+            height: 150px;
+            margin: 0 auto 2rem;
+        }
+
+        .document-page {
+            position: absolute;
+            width: 100px;
+            height: 130px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .document-page:nth-child(1) {
+            transform: rotate(-8deg) translateX(-10px);
+            animation: doc-sway1 3s ease-in-out infinite;
+        }
+
+        .document-page:nth-child(2) {
+            transform: rotate(5deg) translateX(10px);
+            animation: doc-sway2 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .document-page:nth-child(3) {
+            transform: rotate(0deg);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: doc-float 2s ease-in-out infinite;
+        }
+
+        .document-page:nth-child(3)::before {
+            content: '📄';
+            font-size: 40px;
+        }
+
+        .document-page:nth-child(3)::after {
+            content: '';
+            width: 60%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-gold), transparent);
+            border-radius: 4px;
+            margin-top: 10px;
+            animation: shimmer-line 1.5s ease-in-out infinite;
+        }
+
+        @keyframes doc-sway1 {
+            0%, 100% { transform: rotate(-8deg) translateX(-10px); }
+            50% { transform: rotate(-12deg) translateX(-15px); }
+        }
+
+        @keyframes doc-sway2 {
+            0%, 100% { transform: rotate(5deg) translateX(10px); }
+            50% { transform: rotate(8deg) translateX(15px); }
+        }
+
+        @keyframes doc-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shimmer-line {
+            0%, 100% { opacity: 0.3; width: 60%; }
+            50% { opacity: 1; width: 70%; }
+        }
+
+        /* Clock Animation */
+        .clock-wrapper {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(212, 168, 75, 0.4);
+            animation: clock-pulse 2s ease-in-out infinite;
+        }
+
+        .clock-wrapper::before {
+            content: '⏳';
+            font-size: 24px;
+            animation: hourglass 2s linear infinite;
+        }
+
+        @keyframes clock-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes hourglass {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        /* Text Content */
+        h1 {
+            color: var(--white);
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: var(--primary-gold);
+        }
+
+        .description {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Resource Type Badge */
+        .resource-type {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(212, 168, 75, 0.2);
+            border: 1px solid var(--primary-gold);
+            border-radius: 20px;
+            color: var(--primary-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-gold);
+            color: var(--primary-blue);
+            box-shadow: 0 4px 20px rgba(212, 168, 75, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 168, 75, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--primary-gold);
+        }
+
+        /* Progress Indicator */
+        .progress-section {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .progress-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 75%;
+            background: linear-gradient(90deg, var(--primary-gold), #ffd700);
+            border-radius: 4px;
+            animation: progress-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes progress-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .progress-text {
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* School Logo */
+        .school-logo {
+            position: absolute;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .school-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        @media (max-width: 480px) {
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .school-logo {
+                position: relative;
+                top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="bg-pattern"></div>
+
+    <!-- School Logo -->
+    <a href="/" class="school-logo">
+        <img src="/assets/images/school logo.png" alt="KEA" onerror="this.style.display='none'">
+        <span>Kautilya Educational Academy</span>
+    </a>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Document Animation -->
+        <div class="document-icon">
+            <div class="document-page"></div>
+            <div class="document-page"></div>
+            <div class="document-page"></div>
+            <div class="clock-wrapper"></div>
+        </div>
+
+        <!-- Resource Type -->
+        <span class="resource-type" id="resourceType">📄 Document</span>
+
+        <!-- Content -->
+        <h1>Coming <span class="highlight">Soon!</span></h1>
+        <p class="description">
+            We're preparing this resource for you. Our team is working hard to make it available as soon as possible.
+        </p>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">
+                <span>🏠</span> Back to Home
+            </a>
+            <a href="/pages/contact.html" class="btn btn-secondary">
+                <span>📞</span> Contact Us
+            </a>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <div class="progress-label">Preparation Progress</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">Almost Ready! 🎉</div>
+        </div>
+    </div>
+
+    <script>
+        // Detect resource type from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const resource = urlParams.get('resource') || '';
+        const path = window.location.pathname.toLowerCase();
+        const resourceType = document.getElementById('resourceType');
+        
+        // Resource type mapping
+        const resourceMap = {
+            'academic-calendar': { icon: '📅', name: 'Academic Calendar' },
+            'fee-structure': { icon: '💰', name: 'Fee Structure' },
+            'admission-form': { icon: '📝', name: 'Admission Form' },
+            'syllabus': { icon: '📚', name: 'Syllabus' },
+            'results': { icon: '🏆', name: 'Results' },
+            'timetable': { icon: '⏰', name: 'Time Table' },
+            'brochure': { icon: '📖', name: 'School Brochure' }
+        };
+        
+        if (resource && resourceMap[resource]) {
+            resourceType.textContent = `${resourceMap[resource].icon} ${resourceMap[resource].name}`;
+            document.title = `${resourceMap[resource].name} - Coming Soon | KEA Dewas`;
+        } else if (path.includes('.pdf')) {
+            resourceType.textContent = '📄 PDF Document';
+        } else if (path.includes('calendar')) {
+            resourceType.textContent = '📅 Academic Calendar';
+        } else if (path.includes('fee')) {
+            resourceType.textContent = '💰 Fee Structure';
+        } else if (path.includes('gallery') || path.includes('photo')) {
+            resourceType.textContent = '📷 Photo Gallery';
+        } else if (path.includes('video')) {
+            resourceType.textContent = '🎬 Video Content';
+        }
+
+        // Console message
+        console.log('%c⏳ Coming Soon!', 'font-size: 20px; font-weight: bold; color: #d4a84b;');
+        console.log('%c📧 Contact us at principalschool13@gmail.com for any queries.', 'font-size: 12px;');
+    </script>
+</body>
+</html>

@@ -120,6 +120,14 @@
                 `Thank you for choosing Kautilya Educational Academy! 🎓`
             ],
             quickActions: ['Admissions', 'Contact Us']
+        },
+        directions: {
+            patterns: ['direction', 'directions', 'map', 'navigate', 'route', 'how to reach', 'way to', 'get there'],
+            responses: [
+                `📍 **Get Directions to KEA**\n\nWe're located at Bhopal Road, Khatamba, Dewas 455001.\n\nClick below to open Google Maps for navigation!`
+            ],
+            link: { text: '🗺️ Open in Google Maps', url: 'https://maps.app.goo.gl/uSatw4Uq5XLxNyq46', external: true },
+            quickActions: ['Contact Us', 'Admissions']
         }
     };
 
@@ -361,14 +369,34 @@
         return div.innerHTML;
     }
 
+    // Create WhatsApp Floating Button
+    function createWhatsAppButton() {
+        const whatsappHTML = `
+            <a href="https://wa.me/919926042015?text=Hello!%20I'm%20interested%20in%20Kautilya%20Educational%20Academy.%20Please%20share%20more%20details." 
+               class="whatsapp-float" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Chat on WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#ffffff" d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.962C9.776 30.988 12.786 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.338 22.594c-.39 1.098-1.938 2.01-3.172 2.276-.846.18-1.95.322-5.67-1.218-4.762-1.97-7.828-6.81-8.064-7.126-.228-.316-1.866-2.486-1.866-4.742s1.18-3.366 1.6-3.826c.39-.426.92-.534 1.228-.534.296 0 .59.002.848.016.272.014.638-.104.998.762.39.938 1.328 3.242 1.446 3.476.118.234.196.508.04.814-.156.312-.234.504-.46.78-.228.274-.48.612-.686.822-.226.234-.462.488-.2.958.264.468 1.172 1.932 2.516 3.13 1.728 1.542 3.184 2.02 3.636 2.246.452.226.716.19.98-.116.264-.306 1.132-1.32 1.434-1.774.302-.456.604-.378 1.016-.226.414.15 2.626 1.238 3.076 1.464.452.226.752.34.864.526.116.19.116 1.088-.274 2.186z"/>
+                </svg>
+                <span class="whatsapp-tooltip">Chat with us!</span>
+            </a>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', whatsappHTML);
+    }
+
     // Initialize on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             createChatWidget();
+            createWhatsAppButton();
             initChat();
         });
     } else {
         createChatWidget();
+        createWhatsAppButton();
         initChat();
     }
 
