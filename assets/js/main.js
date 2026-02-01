@@ -3,6 +3,23 @@
  * Main JavaScript File
  */
 
+// Page Loader - Extended display time to show full animation
+window.addEventListener('load', function() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        // Wait for the full animation to complete (3.5 seconds)
+        setTimeout(function() {
+            // Add hidden class for fade out
+            loader.classList.add('hidden');
+            
+            // Remove from DOM after fade animation
+            setTimeout(function() {
+                loader.remove();
+            }, 800);
+        }, 3500);
+    }
+});
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
