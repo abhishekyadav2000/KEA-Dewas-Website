@@ -307,7 +307,11 @@ function isValidPhone(phone) {
  * Scroll Animations
  */
 function initAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    // Add animation classes to elements automatically
+    addAnimationClasses();
+    
+    // Observe elements for scroll animations
+    const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right, .animate-scale-in, .animate-stagger, .animate-text-reveal, .animate-counter');
     
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -326,6 +330,86 @@ function initAnimations() {
             observer.observe(element);
         });
     }
+    
+    // Add hover-lift to cards
+    const cards = document.querySelectorAll('.facility-card, .info-card, .news-card, .highlight-card');
+    cards.forEach(card => {
+        card.classList.add('hover-lift', 'card-glow');
+    });
+    
+    // Add pulse to primary CTA buttons in hero
+    const heroCTA = document.querySelector('.hero .btn-primary');
+    if (heroCTA) {
+        heroCTA.classList.add('btn-pulse');
+    }
+}
+
+/**
+ * Add Animation Classes to Elements
+ */
+function addAnimationClasses() {
+    // Section headers
+    document.querySelectorAll('.section-header').forEach(el => {
+        el.classList.add('animate-fade-in-up');
+    });
+    
+    // Welcome section
+    const welcomeImage = document.querySelector('.welcome-image');
+    const welcomeContent = document.querySelector('.welcome-content');
+    if (welcomeImage) welcomeImage.classList.add('animate-fade-in-left');
+    if (welcomeContent) welcomeContent.classList.add('animate-fade-in-right');
+    
+    // Grids with stagger effect
+    document.querySelectorAll('.facilities-grid, .highlights-grid, .info-cards, .stats-grid').forEach(el => {
+        el.classList.add('animate-stagger');
+    });
+    
+    // News grid items
+    document.querySelectorAll('.news-grid').forEach(el => {
+        el.classList.add('animate-stagger');
+    });
+    
+    // Content grids
+    document.querySelectorAll('.content-grid').forEach(el => {
+        const children = el.children;
+        if (children[0]) children[0].classList.add('animate-fade-in-left');
+        if (children[1]) children[1].classList.add('animate-fade-in-right');
+    });
+    
+    // Stat numbers
+    document.querySelectorAll('.stat-item').forEach(el => {
+        el.classList.add('animate-counter');
+    });
+    
+    // Quick links
+    const quickLinks = document.querySelector('.quick-links-grid');
+    if (quickLinks) quickLinks.classList.add('animate-stagger');
+    
+    // CTA sections
+    document.querySelectorAll('.cta-section').forEach(el => {
+        el.classList.add('animate-scale-in');
+    });
+    
+    // Tables
+    document.querySelectorAll('.data-table').forEach(el => {
+        el.classList.add('animate-fade-in-up');
+    });
+    
+    // Forms
+    document.querySelectorAll('.contact-form, .enquiry-form').forEach(el => {
+        el.classList.add('animate-fade-in-up');
+    });
+    
+    // Gallery items
+    document.querySelectorAll('.gallery-item').forEach((el, index) => {
+        el.classList.add('animate-scale-in');
+        el.style.transitionDelay = (index * 0.05) + 's';
+    });
+    
+    // Add image shine effect
+    document.querySelectorAll('.welcome-img, .content-img, .facility-image').forEach(el => {
+        el.classList.add('image-shine');
+    });
 }
 
 /**
