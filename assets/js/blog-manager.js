@@ -20,7 +20,7 @@
             type: 'achievement',
             title: '🏆 Outstanding Board Exam Results 2025-26',
             content: 'We are proud to announce that our students have achieved exceptional results in the CBSE Board Examinations! Our school toppers secured above 95% marks, bringing glory to Kautilya Educational Academy.\n\nCongratulations to all students and teachers for their hard work and dedication!',
-            image: '',
+            image: '../assets/images/achievements /Screenshot_2026-01-11-09-56-50-64_439a3fec0400f8974d35eed09a31f914.jpg.jpeg',
             video: '',
             author: 'Principal',
             date: '2026-01-28',
@@ -32,7 +32,7 @@
             type: 'event',
             title: '🎭 Annual Day Celebration 2026',
             content: 'Our Annual Day was celebrated with great enthusiasm and fervor. Students showcased their talents through dance, drama, and music performances. The chief guest appreciated the holistic development approach of our school.',
-            image: '',
+            image: '../assets/images/achievements /IMG_20250113_111311.jpg.jpeg',
             video: '',
             author: 'Cultural Committee',
             date: '2026-01-20',
@@ -44,7 +44,7 @@
             type: 'sports',
             title: '⚽ District Level Football Champions!',
             content: 'Our school football team has won the District Level Football Championship! The team showed excellent teamwork and sportsmanship throughout the tournament.\n\nSpecial congratulations to the team captain and coach for their leadership.',
-            image: '',
+            image: '../assets/images/achievements /IMG_20250113_111354.jpg.jpeg',
             video: '',
             author: 'Sports Department',
             date: '2026-01-15',
@@ -56,12 +56,24 @@
             type: 'announcement',
             title: '📢 Admissions Open for 2026-27',
             content: 'We are pleased to announce that admissions for the academic session 2026-27 are now open for all classes from Nursery to Class XII.\n\nLimited seats available. Apply now to secure your child\'s future with quality education!',
-            image: '',
+            image: '../assets/images/achievements /IMG_20251004_222742.jpg.jpeg',
             video: '',
             author: 'Admissions Office',
             date: '2026-01-10',
             likes: 28,
             featured: false
+        },
+        {
+            id: 5,
+            type: 'achievement',
+            title: '🎓 Student Excellence Awards',
+            content: 'Celebrating our brilliant students who have demonstrated exceptional performance in academics and co-curricular activities. Their dedication and hard work continue to inspire the entire school community.',
+            image: '../assets/images/achievements /Screenshot_2025-07-30-11-49-44-33_439a3fec0400f8974d35eed09a31f914.jpg.jpeg',
+            video: '',
+            author: 'Academic Committee',
+            date: '2026-01-05',
+            likes: 52,
+            featured: true
         }
     ];
 
